@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\User;
+use App\Projet;
+use App\Tache;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', 'UserController');
+
+Route::resource('/projets', 'ProjetController');
+
+Route::resource('/taches', 'TacheController');
