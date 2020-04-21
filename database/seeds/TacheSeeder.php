@@ -12,10 +12,6 @@ class TacheSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('taches')->insert([
-            "nom" => "",
-            "description" => "",
-            "created_at" => now(),
-        ]);
+        //
     }
 }

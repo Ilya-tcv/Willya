@@ -12,10 +12,6 @@ class ProjetSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('projets')->insert([
-            "nom" => "",
-            "description" => "",
-            "created_at" => now(),
-        ]);
+        //
     }
 }
