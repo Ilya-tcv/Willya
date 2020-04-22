@@ -25,7 +25,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $users = User::all();
+        return view('users.create', compact('users'));
     }
 
     /**
@@ -36,7 +37,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user -> name = request('name');
+        $user -> email = request('email');
+        $user -> password = request('password');
+        $user->save();
+        return redirect('/');
     }
 
     /**
@@ -79,8 +85,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->back();
     }
 }
+
