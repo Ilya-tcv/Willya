@@ -46,7 +46,7 @@
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Description</th>
-            <th scope="col">Owner</th>
+            <th scope="col">Chef de projet</th>
             <th scope="col">Supprimer</th>
         </tr>
     </thead>
@@ -56,7 +56,7 @@
                 <th scope="row">{{$projet->id}}</th>
                 <td>{{$projet->nom}}</td>
                 <td>{{$projet->description}}</td>
-                <td>{{$projet->user_id}}</td>
+                <td>{{$projet->user->name}}</td>
                 <td>
                     <form action="{{$projet->id}}"" method="POST">
                         @csrf

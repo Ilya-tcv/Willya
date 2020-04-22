@@ -13,26 +13,13 @@
           <div id="logo" class="">
             {{-- <a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a> --}}
             <!-- Uncomment below if you prefer to use a text image -->
-            <h1><a href="/11 - Exo-Crud/public/database">Willya</a></h1>
+            <h1><a href="/">Willya</a></h1>
           </div>
     
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Users<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/projets">Projets</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/taches">Tâches</a>
-                </li>
-              </ul>
-            </div>
           </nav>
           <!-- #nav-menu-container -->
         </div>
