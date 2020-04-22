@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Tache;
+use App\Projet;
 
 class UserController extends Controller
 {
@@ -15,7 +17,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('welcome', compact('users'));
+        $projets = Projet::all();
+        return view('welcome', compact('users', 'projets'));
     }
 
     /**
@@ -45,27 +48,6 @@ class UserController extends Controller
         return redirect('/');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -87,7 +69,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        $user->delete();
+        $user -> delete();
         return redirect()->back();
     }
 }
