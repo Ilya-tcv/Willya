@@ -91,7 +91,7 @@
                 <th scope="row">{{$tache->id}}</th>
                 <td>{{$tache->nom}}</td>
                 <td>{{$tache->description}}</td>
-                <td>{{$tache->projet->name}}</td>
+                <td>{{$tache->projet_id}}</td>
                 <td>
                     <form action="taches/{{$projet->id}}" method="POST">
                         @csrf
