@@ -3,7 +3,7 @@
 @section('content')
 <div class="text-center">
     <h1 >Users</h1>
-    <a href="/create" class="btn btn-success mt-5">Create</a> 
+    <a href="/users/create" class="btn btn-success mt-5">Create</a> 
 </div>
     <table class="table mt-5">
         <thead class="thead-dark">
@@ -23,7 +23,7 @@
                     <td>{{$user->email}}</td>
                     <td>{{$user->password}}</td>
                     <td>
-                        <form action="{{$user->id}}"" method="POST">
+                        <form action="/users/{{$user->id}}"" method="POST">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -91,9 +91,9 @@
                 <th scope="row">{{$tache->id}}</th>
                 <td>{{$tache->nom}}</td>
                 <td>{{$tache->description}}</td>
-                <td>{{$tache->projet_id}}</td>
+                <td>{{$tache->projet->nom}}</td>
                 <td>
-                    <form action="taches/{{$projet->id}}" method="POST">
+                    <form action="taches/{{$tache->id}}" method="POST">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger">Delete</button>

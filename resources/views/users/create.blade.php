@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('content')
-    <form action="/" method="post">
+    <form action="/users" method="post">
         @csrf
         <div class="form-group">
             <label>Nom :</label>

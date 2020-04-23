@@ -16,7 +16,11 @@ use App\Tache;
 |
 */
 
-Route::resource('/', 'UserController');
+Route::get('/', function(){
+    return redirect('/users');
+});
+
+Route::resource('/users', 'UserController');
 
 Route::resource('/projets', 'ProjetController');
 

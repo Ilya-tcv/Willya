@@ -46,7 +46,7 @@ class UserController extends Controller
         $user -> email = request('email');
         $user -> password = request('password');
         $user->save();
-        return redirect('/');
+        return redirect('/users');
     }
 
 
@@ -70,7 +70,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        $user -> delete();
+        $user->delete();
         return redirect()->back();
     }
 }

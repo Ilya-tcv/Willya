@@ -53,7 +53,7 @@ class TacheController extends Controller
      * @param  \App\Tache  $tache
      * @return \Illuminate\Http\Response
      */
-    public function show(Tache $tache)
+    public function show(Tache $tach)
     {
         //
     }
@@ -64,7 +64,7 @@ class TacheController extends Controller
      * @param  \App\Tache  $tache
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tache $tache)
+    public function edit(Tache $tach)
     {
         //
     }
@@ -76,7 +76,7 @@ class TacheController extends Controller
      * @param  \App\Tache  $tache
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tache $tache)
+    public function update(Request $request, Tache $tach)
     {
         //
     }
@@ -87,9 +87,9 @@ class TacheController extends Controller
      * @param  \App\Tache  $tache
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tache $tache)
+    public function destroy(Tache $tach)
     {
-        $tache -> delete();
+        $tach -> delete();
         return redirect()->back();
     }
 }
