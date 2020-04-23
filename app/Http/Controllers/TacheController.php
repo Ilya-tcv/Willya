@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tache;
+use App\Projet;
 use Illuminate\Http\Request;
 
 class TacheController extends Controller
@@ -24,7 +25,9 @@ class TacheController extends Controller
      */
     public function create()
     {
-        //
+        $tache = Tache::all();
+        $projet = Projet::all();
+        return view('taches.create', compact('tache', 'projet'));
     }
 
     /**
@@ -35,7 +38,13 @@ class TacheController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tache = new Tache();
+        $tache -> nom = request('nom');
+        $tache -> description = request('description');
+        $tache -> projet_id = request('projet_id');
+        
+        $tache->save();
+        return redirect('/');
     }
 
     /**
@@ -80,6 +89,7 @@ class TacheController extends Controller
      */
     public function destroy(Tache $tache)
     {
-        //
+        $tache -> delete();
+        return redirect()->back();
     }
 }
