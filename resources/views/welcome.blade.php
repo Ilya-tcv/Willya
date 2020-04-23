@@ -58,7 +58,7 @@
                 <td>{{$projet->description}}</td>
                 <td>{{$projet->user->name}}</td>
                 <td>
-                    <form action="{{$projet->id}}"" method="POST">
+                    <form action="projets/{{$projet->id}}" method="POST">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger">Delete</button>
