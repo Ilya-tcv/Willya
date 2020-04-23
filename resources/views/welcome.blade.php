@@ -85,15 +85,15 @@
             <th scope="col">Supprimer</th>
         </tr>
     </thead>
-    @foreach ($projets as $projet)
+    @foreach ($taches as $tache)
         <tbody>
             <tr>
-                <th scope="row">{{$projet->id}}</th>
-                <td>{{$projet->nom}}</td>
-                <td>{{$projet->description}}</td>
-                <td>{{$projet->projet->name}}</td>
+                <th scope="row">{{$tache->id}}</th>
+                <td>{{$tache->nom}}</td>
+                <td>{{$tache->description}}</td>
+                <td>{{$tache->projet->name}}</td>
                 <td>
-                    <form action="projets/{{$projet->id}}" method="POST">
+                    <form action="taches/{{$projet->id}}" method="POST">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger">Delete</button>

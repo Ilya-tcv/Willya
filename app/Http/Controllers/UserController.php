@@ -18,7 +18,8 @@ class UserController extends Controller
     {
         $users = User::all();
         $projets = Projet::all();
-        return view('welcome', compact('users', 'projets'));
+        $taches = Tache::all();
+        return view('welcome', compact('users', 'projets', 'taches'));
     }
 
     /**
